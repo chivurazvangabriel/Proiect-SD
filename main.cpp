@@ -21,7 +21,7 @@ int main() {
     
     auto start = std::chrono::high_resolution_clock::now();
     
-    sorts::merge_sort(a);
+    sorts::gnome_sort(a);
     
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed = end - start;
