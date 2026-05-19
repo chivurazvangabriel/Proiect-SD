@@ -2,7 +2,7 @@
 // Created by minec on 5/19/2026.
 //
 
-#include "../sorts.h"
+#include "sorts.h"
 
 // Forward declaration of the helper functions
 void merge(vector<int>& vec, vector<int>& temp, int left, int mid, int right);

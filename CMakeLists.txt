@@ -7,4 +7,8 @@ add_executable(Proiect_SD
         main.cpp
         sorts.h
         merge/merge_sort.cpp
-        test_case_generator.cpp)
+        test_case_generator.cpp
+        heap/heap_sort.cpp
+        gnome/gnome_sort.cpp)
+
+target_include_directories(Proiect_SD PRIVATE .)
