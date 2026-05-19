@@ -8,7 +8,7 @@
 
 using namespace std;
 
-int main() {
+int maine() {
     std::ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
     
@@ -21,7 +21,7 @@ int main() {
     
     auto start = std::chrono::high_resolution_clock::now();
     
-    sorts::gnome_sort(a);
+    sorts::merge_sort(a);
     
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed = end - start;

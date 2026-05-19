@@ -6,4 +6,5 @@ set(CMAKE_CXX_STANDARD 14)
 add_executable(Proiect_SD
         main.cpp
         sorts.h
-        merge_sort.cpp)
+        merge/merge_sort.cpp
+        test_case_generator.cpp)
