@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 4.1)
+project(Proiect_SD)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(Proiect_SD
+        main.cpp
+        sorts.h
+        merge_sort.cpp)
