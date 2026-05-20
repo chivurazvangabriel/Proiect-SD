@@ -10,28 +10,23 @@ void patienceSort(std::vector<int>& a) {
     
     std::vector<std::vector<int>> piles;
     
-    // Pasul 1: Formarea gramezilor
     for (int x : a) {
-        // Cautare binara: gasim prima gramada care are top-ul >= x
         auto it = std::lower_bound(piles.begin(), piles.end(), x, 
             [](const std::vector<int>& pile, int val) {
-                return pile.back() < val; // Comparam cu varful gramezii
+                return pile.back() < val; 
             });
             
         if (it == piles.end()) {
-            piles.push_back({x}); // Gramada noua
+            piles.push_back({x}); 
         } else {
-            it->push_back(x); // Adaugam in gramada gasita
+            it->push_back(x); 
         }
     }
     
-    // Pasul 2: Interclasarea (Merge) folosind Min-Heap
-    // Pair-ul retine: {valoare, {index_gramada, index_element}}
     using Element = std::pair<int, std::pair<int, int>>;
     std::priority_queue<Element, std::vector<Element>, std::greater<Element>> pq;
     
     for (size_t i = 0; i < piles.size(); ++i) {
-        // Punem cel mai mic element din fiecare gramada (aflat la finalul vectorului)
         pq.push({piles[i].back(), {(int)i, (int)piles[i].size() - 1}});
     }
     
@@ -46,7 +41,6 @@ void patienceSort(std::vector<int>& a) {
         
         a[idx++] = val;
         
-        // Daca mai sunt elemente in gramada respectiva, il bagam pe urmatorul in coada
         if (e > 0) {
             pq.push({piles[p][e - 1], {p, e - 1}});
         }
