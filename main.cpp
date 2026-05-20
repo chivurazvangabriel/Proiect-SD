@@ -4,24 +4,28 @@
 #include <vector>
 #include <chrono>
 #include <ranges>
+#include <fstream>
 #include "sorts.h"
 
 using namespace std;
 
-int maine() {
+ifstream fin("../radix/big_radix_sort_worst.in");
+
+
+int main() {
     std::ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
     
     int n;
-    std::cin >> n;
+    fin >> n;
     std::vector<int> a(n);
     for (int& x : a) {
-        std::cin >> x;
+        fin >> x;
     }
     
     auto start = std::chrono::high_resolution_clock::now();
     
-    sorts::merge_sort(a);
+    sorts::radix_sort(a);
     
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed = end - start;

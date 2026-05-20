@@ -9,6 +9,7 @@ add_executable(Proiect_SD
         merge/merge_sort.cpp
         test_case_generator.cpp
         heap/heap_sort.cpp
-        gnome/gnome_sort.cpp)
+        gnome/gnome_sort.cpp
+        radix/radix_sort.cpp)
 
 target_include_directories(Proiect_SD PRIVATE .)

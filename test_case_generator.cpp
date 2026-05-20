@@ -112,7 +112,7 @@ void create_gnome_sort_cases() {
     write_to_file("../gnome/big_gnome_sort_worst.in", big_worst);
 }
 
-int main() {
+int maine() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
