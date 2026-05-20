@@ -1,0 +1,2 @@
+This test is an almost perfectly reversed array, generated just like the almost sorted one.
+Time taken: 0.52 seconds. This is the strongest case for the heap sort, because on heap insertions you always hit the best case(small number of swaps).
